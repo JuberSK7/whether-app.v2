@@ -6,7 +6,7 @@ import '../component/Whether-style.css';
 
 const Whether = () => {
      const [city, setCity] = useState();
-     const [search, setSearch] = useState("pune");
+     const [search, setSearch] = useState("Pune");
 
      ////////////////  fetch rest whether api data using useEffect///
 
