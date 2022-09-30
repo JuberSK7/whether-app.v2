@@ -9,17 +9,16 @@ const Whether = () => {
      const [search, setSearch] = useState("Pune");
 
      ////////////////  fetch rest whether api data using useEffect///
-
-     useEffect(() => {
-        const fetchApi = async () => {
+     
+           const fetchApi = async () => {
             const url = `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=a5060cd3287d2b5fcfd3ba0012227594`;
             const response = await fetch(url);
             const resJson = await response.json();
 
-            setCity(resJson.main)
-            
+            setCity(resJson.main)  
         }
 
+     useEffect(() => {
         fetchApi();
         
      }, [search])
